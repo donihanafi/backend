@@ -311,6 +311,8 @@ class Filter extends WidgetBase
      */
     public function applyAllScopesToQuery($query)
     {
+        $this->defineFilterScopes();
+        
         foreach ($this->allScopes as $scope) {
             $this->applyScopeToQuery($scope, $query);
         }
